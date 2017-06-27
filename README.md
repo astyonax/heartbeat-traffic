@@ -21,18 +21,22 @@ You may think  the number of cars in the periferique to be bigger than that in t
 
 ## How it is done
 
-1. Downloaded the full csv (1.9Gb, 35e6 records)
+1. Downloaded the full csv (1.2Gb, 31e6 records)
 
 1. We aggregated the data averaging over business days (Monday to Friday) [[code]](raw csv to aggregates.ipynb).
 
+2. Checkpoints with fixed counts among the dataset or 0/`nan` readings are removed (I guess that they are broken).
 2. Paris is discretized on a coarse-graining grid of 25x25 cells. Per each measurement station inside a cell we summed the # of passages and the average position [[code]](preprocess_aggregates.py)
 
 3. To achieve a good visualization:
 	1.  the maximum number of counted car passes per hour is capped at 15e3 per counter
 	2. we compute intermediate points on a 100x100 grid with linear interpolation [[code]](traffic-movie.ipynb). This yield the smoothly varying colormap.
 	 
+The data files are not stored in this repo because they will get outdated in weeks. The final dataframe after pre-processing is about 60Mb, totally manageable.
+
+
 ## Daily traffic cycle
-Just because we can (and it is fast to do)
+The code is [[here]](traffic-cycles.ipynb).
 
 We can easily distinguish checkpoints on the periferique by the others because those in the periferique are less, but with a high maximum rate of cars passing through:
 
@@ -41,3 +45,10 @@ We can easily distinguish checkpoints on the periferique by the others because t
 Thus, we can plot the number of cars in the periferique versus those in the inner city each hour per month:
 
 ![Traffic cycle](/home/astyonax/Projects/PostDoc/Traffic/figures/perifvscity.png) 
+
+----
+
+Nothing of this would have been possible without: 
+
+python, numpy, pandas, sqlite, matplotlib, jupyter, bookeh, holoviews, conda, imagemagick, ffmpeg and the effort of those releasing and maintaining FOSS.
+
