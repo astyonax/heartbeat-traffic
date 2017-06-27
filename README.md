@@ -40,11 +40,11 @@ The code is [[here]](traffic-cycles.ipynb).
 
 We can easily distinguish checkpoints on the periferique by the others because those in the periferique are less, but with a high maximum rate of cars passing through:
 
-![Histogram of max counted cars](/home/astyonax/Projects/PostDoc/Traffic/figures/histogram_counts.png) 
+![Histogram of max counted cars](figures/histogram_counts.png) 
 
 Thus, we can plot the number of cars in the periferique versus those in the inner city each hour per month:
 
-![Traffic cycle](/home/astyonax/Projects/PostDoc/Traffic/figures/perifvscity.png) 
+![Traffic cycle](figures/perifvscity.png) 
 
 ----
 
