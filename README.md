@@ -46,6 +46,9 @@ Thus, we can plot the number of cars in the periferique versus those in the inne
 
 ![Traffic cycle](figures/perifvscity.png) 
 
+## License
+The movies, animation, plots, and texts (said the content) of this project are licensed under the [Creative Commons Attribution Share Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license, and the underlying source code used to analyze, format, render, and display that content is licensed under the [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt) license.
+
 ----
 
 Nothing of this would have been possible without: 
