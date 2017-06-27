@@ -1,0 +1,2 @@
+#! /usr/bin/env bash
+BOKEH_RESOURCES=inline jupyter notebook --NotebookApp.iopub_data_rate_limit=100000000 --no-browser
