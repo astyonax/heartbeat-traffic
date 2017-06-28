@@ -25,7 +25,7 @@ You may think  the number of cars in the periferique to be bigger than that in t
 
 1. Downloaded the full csv (1.2Gb, 31e6 records)
 
-1. We aggregated the data averaging over business days (Monday to Friday) [[code]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/raw csv to aggregates.ipynb).
+1. We aggregated the data averaging over business days (Monday to Friday) [[code]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/raw%20csv%20to%20aggregates.ipynb).
 
 2. Checkpoints with fixed counts among the dataset or 0/`nan` readings are removed (I guess that they are broken).
 2. Paris is discretized on a coarse-graining grid of 25x25 cells. Per each measurement station inside a cell we summed the # of passages and the average position [[code]](preprocess_aggregates.py)
