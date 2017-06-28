@@ -5,6 +5,7 @@ Visualization of the traffic (`#cars/hour`) in Paris from data published by the 
 The data covers the period from the 21.01.2016  till 05.2017.
 
 [![Traffic in paris per month and per hour](traffic_25.gif  "Traffic in paris per month and per hour")](traffic_25.webm)
+
 *`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](traffic-movie.ipynb) -- `Movie:` [link](traffic_25.webm) -- `Interactive:` [link](traffic-interactive.ipynb)
 
 ### The heartbeat depicted
