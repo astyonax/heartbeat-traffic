@@ -16,7 +16,7 @@ The two give similar pdf for the number of car passes, shifted by a lag of ~1h: 
 
 ### Illusions
 
-You may think  the number of cars in the periferique to be bigger than that in the city. **Wrong**. We can measure it, you can't too. By measuring  passages via the checkpoints (or measuring stations) with the time resolution of 1h[^] we can't measure  which cars are repeatedly counted during the same hour in different contiguous checkpoints. 
+You may think  the number of cars in the periferique to be bigger than that in the city. **Wrong**. We can't measure it, you can't too. By measuring  passages via the checkpoints (or measuring stations) with the time resolution of 1h[^] we can't measure  which cars are repeatedly counted during the same hour in different contiguous checkpoints. 
 
 [^] 1h is the minimum time scale reported in the raw data).
 
