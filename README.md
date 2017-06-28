@@ -5,8 +5,9 @@ Visualization of the traffic (`#cars/hour`) in Paris from data published by the 
 The data covers the period from the 21.01.2016  till 05.2017.
 
 [![Traffic in paris per month and per hour](traffic_25.gif  "Traffic in paris per month and per hour")](traffic_25.webm)
+https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-interactive.ipynb
 
-*`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](traffic-movie.ipynb) -- `Movie:` [link](traffic_25.webm) -- `Interactive:` [link](traffic-interactive.ipynb)
+*`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-movie.ipynb) -- `Movie:` [link](traffic_25.webm) -- `Interactive:` [link](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-interactive.ipynb)
 
 ### The heartbeat depicted
 We distinguish (statistically, see below) the periferique (essentially a 1D membrane) from the city (essentially a 2D cell :D). 
@@ -24,20 +25,20 @@ You may think  the number of cars in the periferique to be bigger than that in t
 
 1. Downloaded the full csv (1.2Gb, 31e6 records)
 
-1. We aggregated the data averaging over business days (Monday to Friday) [[code]](raw csv to aggregates.ipynb).
+1. We aggregated the data averaging over business days (Monday to Friday) [[code]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/raw csv to aggregates.ipynb).
 
 2. Checkpoints with fixed counts among the dataset or 0/`nan` readings are removed (I guess that they are broken).
 2. Paris is discretized on a coarse-graining grid of 25x25 cells. Per each measurement station inside a cell we summed the # of passages and the average position [[code]](preprocess_aggregates.py)
 
 3. To achieve a good visualization:
 	1.  the maximum number of counted car passes per hour is capped at 15e3 per counter
-	2. we compute intermediate points on a 100x100 grid with linear interpolation [[code]](traffic-movie.ipynb). This yield the smoothly varying colormap.
+	2. we compute intermediate points on a 100x100 grid with linear interpolation [[code]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-movie.ipynb). This yield the smoothly varying colormap.
 	 
 The data files are not stored in this repo because they will get outdated in weeks. The final dataframe after pre-processing is about 60Mb, totally manageable.
 
 
 ## Daily traffic cycle
-The code is [[here]](traffic-cycles.ipynb).
+The code is [[here]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-cycles.ipynb).
 
 We can easily distinguish checkpoints on the periferique by the others because those in the periferique are less, but with a high maximum rate of cars passing through:
 
