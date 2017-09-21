@@ -6,9 +6,10 @@ The data covers the period from the 21.01.2016  till 05.2017.
 
 [![Traffic in paris per month and per hour](traffic_25.gif  "Traffic in paris per month and per hour")](traffic_25.webm)
 
-*`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-movie.ipynb) -- `Movie:` [link](traffic_25.webm) -- `Interactive:` [link](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-interactive.ipynb)
+`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-movie.ipynb) -- `Movie:` [link](traffic_25.webm) -- `Interactive:` [link](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-interactive.ipynb)
 
 ### The heartbeat depicted
+
 We distinguish (statistically, see below) the periferique (essentially a 1D membrane) from the city (essentially a 2D cell :D).
 In the figure below we plot how many cars are counted per hour and per month among all checkpoints (normed by the average over months). Each line is a month, and the numbers indicate the months from August (8) till December (12).
 
@@ -50,6 +51,12 @@ We can easily distinguish checkpoints on the periferique by the others because t
 Thus, we can plot the number of cars in the periferique versus those in the inner city each hour per month:
 
 ![Traffic cycle](figures/perifvscity.png)
+
+## Principal Components
+The code is [[here]](...)
+![All modes versus all modes but first mode](pca.gif)
+
+With [principal components analysis](https://en.wikipedia.org/..) of the traffic  we can isolate the dominant behavior (which gives the "heartbeat"-like oscillations) from the rest.
 
 ## License
 The movies, animation, plots, and texts (said the content) of this project are licensed under the [Creative Commons Attribution Share Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license, and the underlying source code used to analyze, format, render, and display that content is licensed under the [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt) license.
