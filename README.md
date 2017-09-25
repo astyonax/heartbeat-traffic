@@ -75,7 +75,7 @@ and time modulation and relative importance of the modes are
 
 An academic use of this technique is on the paper: _Human sperm steer with second harmonics of the flagellar beat_ ([arxiv](https://arxiv.org/abs/1703.07705),[!!](??))
 
-So, we can now reconstruct the data, filtering the 0th mode, which brings in 92% of the signal but shadows other small yet correlated parts of the signal.
+We can now reconstruct the data, filtering out the 0th mode, which brings in 92% of the signal but shadows other small yet correlated parts of the signal.
 In the opening animation, on the left there is a reconstruction with all modes, on the right with all but the 0th; a red big dot  indicates more car than average, and a blue small dot indicate less cars than average.
 
 Missing further data to validate possible models, I leave the interpretation to the reader ;)
