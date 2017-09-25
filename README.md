@@ -60,8 +60,8 @@ Thus, we can plot the number of cars in the periferique versus those in the inne
 
 
 [Principal components analysis](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html) allow to isolate the dominant behavior in a signal from the rest. It computes a set of empirical _eigenvectors_, directions along which the data is statistically uncorrelated. The associated _eigenvalues_ give a measure of the importance of the mode in the dataset. I chose to study the fluctuations of the counters with respect to the mean at each hour.
-The data, in this case is a 2D map C(i,t), where i is the i-th counter, and t the measurement time.
-The dataset look like
+In this case the data is a 2D map C(i,t), where i is the i-th counter, and t the measurement time.
+The dataset looks like
 
 ![Dataset for PCA](figures/pca_norm_time.png)
 
