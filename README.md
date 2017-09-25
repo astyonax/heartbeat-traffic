@@ -69,7 +69,7 @@ And the first 4 modes are
 
 ![PCA modes](figures/map_modes.png)
 
-and the relative importance and time variation are
+and time modulation and relative importance of the modes are
 
 ![PCA modes](figures/pca_norm_ampli.png)
 
