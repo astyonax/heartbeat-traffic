@@ -53,7 +53,7 @@ Thus, we can plot the number of cars in the periferique versus those in the inne
 ![Traffic cycle](figures/perifvscity.png)
 
 ## Principal Components
-The code is [traffic-pca.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-pca.ipynb)
+
 ![All modes versus all modes but first mode](movies/pca.gif)
 
 `Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-pca.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-pca.ipynb) -- `Movie:` [link](movies/pca.webm)
