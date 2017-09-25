@@ -53,10 +53,27 @@ Thus, we can plot the number of cars in the periferique versus those in the inne
 ![Traffic cycle](figures/perifvscity.png)
 
 ## Principal Components
-The code is [[here]](...)
+The code is [[here]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-pca.ipynb)
 ![All modes versus all modes but first mode](pca.gif)
 
-With [principal components analysis](https://en.wikipedia.org/..) of the traffic  we can isolate the dominant behavior (which gives the "heartbeat"-like oscillations) from the rest.
+
+[Principal components analysis](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html) allow to isolate the dominant behavior in a signal from the rest. It computes a set of empirical _eigenvectors_, directions along which the data is statistically uncorrelated. The associated _eigenvalues_ give a measure of the importance of the mode in the dataset. I chose to study the fluctuations of the counters with respect to the mean at each hour.
+The data, in this case is a 2D map C(i,t), where i is the i-th counter, and t the measurement time.
+The dataset look like
+![Dataset for PCA](figures/pca_norm_time.png)
+And the first 4 modes are
+![PCA modes](figures/map_modes.png)
+and the relative importance and time variation are
+![PCA modes](figures/pca_norm_ampli.png)
+
+A more academic use of this technique is on the paper: _Human sperm steer with second harmonics of the flagellar beat_ ([arxiv](https://arxiv.org/abs/1703.07705),[!!](??))
+
+So, we can now reconstruct the data, filtering the 0th mode, which brings in 92% of the signal but shadows other small yet correlated parts of the signal.
+In the opening animation, on the left there is a reconstruction with all modes, on the right with all but the 0th; a red big dot  indicates more car than average, and a blue small dot indicate less cars than average.
+
+Missing further data to validate possible models, I leave the interpretation to the reader ;) 
+
+
 
 ## License
 The movies, animation, plots, and texts (said the content) of this project are licensed under the [Creative Commons Attribution Share Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license, and the underlying source code used to analyze, format, render, and display that content is licensed under the [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt) license.
