@@ -4,9 +4,9 @@
 Visualization of the traffic (`#cars/hour`) in Paris from data published by the [OpenData-Paris](https://opendata.paris.fr) project.
 The data covers the period from the 21.01.2016  till 05.2017.
 
-[![Traffic in paris per month and per hour](traffic_25.gif  "Traffic in paris per month and per hour")](traffic_25.webm)
+[![Traffic in paris per month and per hour](movies/traffic_25.gif  "Traffic in paris per month and per hour")](movies/traffic_25.webm)
 
-`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-movie.ipynb) -- `Movie:` [link](traffic_25.webm) -- `Interactive:` [link](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-interactive.ipynb)
+`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-movie.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-movie.ipynb) -- `Movie:` [link](movies/traffic_25.webm) -- `Interactive:` [link](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-interactive.ipynb)
 
 ### The heartbeat depicted
 
@@ -53,17 +53,24 @@ Thus, we can plot the number of cars in the periferique versus those in the inne
 ![Traffic cycle](figures/perifvscity.png)
 
 ## Principal Components
-The code is [[here]](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-pca.ipynb)
-![All modes versus all modes but first mode](pca.gif)
+The code is [traffic-pca.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-pca.ipynb)
+![All modes versus all modes but first mode](movies/pca.gif)
+
+`Map: `[Stamen Toner](http://maps.stamen.com/toner/) -- `Data`: [comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents/table/) -- `Code`: [traffic-pca.ipynb](https://nbviewer.jupyter.org/github/astyonax/heartbeat-traffic/blob/master/traffic-pca.ipynb) -- `Movie:` [link](movies/pca.webm)
 
 
 [Principal components analysis](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html) allow to isolate the dominant behavior in a signal from the rest. It computes a set of empirical _eigenvectors_, directions along which the data is statistically uncorrelated. The associated _eigenvalues_ give a measure of the importance of the mode in the dataset. I chose to study the fluctuations of the counters with respect to the mean at each hour.
 The data, in this case is a 2D map C(i,t), where i is the i-th counter, and t the measurement time.
 The dataset look like
+
 ![Dataset for PCA](figures/pca_norm_time.png)
+
 And the first 4 modes are
+
 ![PCA modes](figures/map_modes.png)
+
 and the relative importance and time variation are
+
 ![PCA modes](figures/pca_norm_ampli.png)
 
 A more academic use of this technique is on the paper: _Human sperm steer with second harmonics of the flagellar beat_ ([arxiv](https://arxiv.org/abs/1703.07705),[!!](??))
@@ -71,7 +78,7 @@ A more academic use of this technique is on the paper: _Human sperm steer with s
 So, we can now reconstruct the data, filtering the 0th mode, which brings in 92% of the signal but shadows other small yet correlated parts of the signal.
 In the opening animation, on the left there is a reconstruction with all modes, on the right with all but the 0th; a red big dot  indicates more car than average, and a blue small dot indicate less cars than average.
 
-Missing further data to validate possible models, I leave the interpretation to the reader ;) 
+Missing further data to validate possible models, I leave the interpretation to the reader ;)
 
 
 
